@@ -39,18 +39,13 @@ def markComplete():
     display()
     print("Enter the Serial number/numbers of task you want to mark completed,if finished type 'Done' :")
     numbers=[]
-    # file=open('task.txt','a')
+    file=open('task.txt','a')
     while True:
         sl_no=input("->")
         if sl_no=='done' or sl_no=="Done":
             break
         numbers.append(int(sl_no))
-    for number in len(numbers):
-        print(number)
 
-    # for line in file:
-    #     for number in numbers:
-    #         if line ==number:
     lines = []
     # read file
     with open("task.txt", 'r') as fp:
@@ -66,8 +61,6 @@ def markComplete():
             if number not in numbers:
                 fp.write(line)
     fp.close()
-    print("Updating list...")
-    display()
 
 
 
