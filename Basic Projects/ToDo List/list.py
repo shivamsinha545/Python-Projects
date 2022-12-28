@@ -56,8 +56,7 @@ def markComplete():
     with open("task.txt", 'w') as fp:
         # iterate each line
         for number, line in enumerate(lines):
-            # delete line 5 and 8. or pass any Nth line you want to remove
-            # note list index starts from 0
+            number += 1
             if number not in numbers:
                 fp.write(line)
     fp.close()
